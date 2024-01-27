@@ -4,13 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>PLAY WITH ALFRED</title>
+  <title>Valentine's Day Game</title>
 </head>
 <body>
-  <div id="name-container">
-    <label for="username">What is your name?</label>
-    <input type="text" id="username">
-    <button onclick="startGame()">Start</button>
+  <div id="game-container">
+    <h1>Hello, <span id="username"></span>!</h1>
+    <p>Please send me bums?</p>
+    <button onclick="sendBums('yes')">Yes</button>
+    <button id="no-button" onclick="runAway()">No</button>
   </div>
   <script src="script.js"></script>
 </body>

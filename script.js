@@ -1,28 +1,44 @@
-function askForValentine() {
-    const nameInput = document.getElementById('name');
-    const name = nameInput.value.trim();
+// script.js
 
-    if (name !== '') {
-        const response = confirm(`Hi ${name}! Will you be my Valentine?`);
+const urlParams = new URLSearchParams(window.location.search);
+const username = urlParams.get('username');
 
-        if (response) {
-            // Do something special when she presses "Yes"
-            alert('Yay! You said yes! 💖 Now do the things!!!');
-
-            // You can redirect to another page or perform additional actions here
-            // Example: window.location.href = 'https://example.com/special-valentine-page';
-        } else {
-            alert('Oh no! 😢 Maybe next time.');
-        }
-    } else {
-        alert('Please enter your name before proceeding.');
-    }
+if (username) {
+  document.getElementById('username').innerText = username;
 }
 
-function runAway() {
-    const button = document.querySelector('button');
-    const randomX = Math.floor(Math.random() * (window.innerWidth - button.clientWidth));
-    const randomY = Math.floor(Math.random() * (window.innerHeight - button.clientHeight));
+function startGame() {
+  const username = document.getElementById('username').value;
 
-    button.style.transform = `translate(${randomX}px, ${randomY}px)`;
+  if (username) {
+    // Open the new game page
+    window.location.href = `game.html?username=${encodeURIComponent(username)}`;
+  } else {
+    alert('Please enter your name.');
+  }
+}
+
+function sendBums(choice) {
+  if (choice === 'yes') {
+    alert("Good Shot, I am online on Whatsapp!");
+  }
+}
+
+let noButtonClickable = true;
+
+function runAway() {
+  if (noButtonClickable) {
+    moveNoButton();
+    noButtonClickable = false;
+  }
+}
+
+function moveNoButton() {
+  const button = document.getElementById("no-button");
+  const newPositionX = Math.random() * (window.innerWidth - button.offsetWidth);
+  const newPositionY = Math.random() * (window.innerHeight - button.offsetHeight);
+
+  button.style.position = "absolute";
+  button.style.left = newPositionX + "px";
+  button.style.top = newPositionY + "px";
 }

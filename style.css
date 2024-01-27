@@ -1,26 +1,26 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: #f7f7f7;
     margin: 0;
-}
+  }
 
-.container {
-    position: relative;
-}
+  #name-container {
+    margin-top: 50px;
+  }
 
-#sprite {
-    width: 100px; /* Adjust the size as needed */
-    position: absolute;
-    transition: all 0.5s ease-in-out;      
-}
+  label {
+    font-size: 20px;
+    margin-right: 10px;
+  }
 
-button {
+  input {
+    padding: 10px;
     font-size: 16px;
+  }
+
+  button {
     padding: 10px 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+    font-size: 16px;
+    margin-top: 10px;
+  }
