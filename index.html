@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Show me bums</title>
+</head>
+<body>
+  <div id="name-container">
+    <h2>Enter Your Name:</h2>
+    <input type="text" id="name-input" placeholder="Your Name">
+    <button onclick="startValentine()">Start</button>
+  </div>
+  <div id="question-container" style="display:none;">
+    <h1 id="valentine-question"></h1>
+    <img id="sprite" src="sprite.png" alt="Cute Sprite">
+    <div id="options">
+      <button id="yes-button" onclick="sayYes()">Yes</button>
+      <button id="no-button" onclick="runAway()">No</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
