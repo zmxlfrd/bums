@@ -1,16 +1,20 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>PLAY WITH ALFRED</title>
+  <title>PLAY WITH ALFRED!</title>
 </head>
 <body>
-  <div id="name-container">
-    <label for="username">What is your name?</label>
-    <input type="text" id="username">
-    <button onclick="startGame()">Start</button>
+  <div id="game-container">
+    <h1>Hello Asiphe, Please send me bums?</h1>
+    <img id="sprite" src="sprite.png" alt="Cute Sprite">
+    <div id="options">
+      <button onclick="sendBums('yes')">Yes</button>
+      <button id="no-button" onclick="runAway()">No</button>
+    </div>
   </div>
   <script src="script.js"></script>
 </body>
